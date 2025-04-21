@@ -1,0 +1,43 @@
+nav {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  background-color: bisque;
+  & a{
+    padding: 20px;
+  }
+  & a:hover {
+    background-color: beige;
+    border-radius: 10px;
+  }
+}
+
+.homeLinks {
+  background-color: bisque;
+  padding: 80px;
+  padding-inline: 250px;
+  border-radius: 10px;
+  & li {
+    padding: 14px;
+    cursor: pointer;
+    font-size: larger;
+  }
+  & li::marker {
+    color: black;
+  }
+  & li:hover {
+    background-color: beige;
+    border-radius: 10px;
+  }
+}
