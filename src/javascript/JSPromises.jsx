@@ -254,7 +254,7 @@ export const JSPromises = () => {
   //const promiseWithResolver = Promise.withResolvers()
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <>
       <MainHeading heading="JavaScript Promises" />
       {/* Introduction */}
       <section className="mb-8 bg-gray-800 p-4 rounded-lg">
@@ -501,7 +501,7 @@ p1.then(
           </Buttons>
         </Grid>
       </section>
-    </div>
+    </>
   );
 };
 

@@ -3,7 +3,6 @@ import "./App.css";
 import { HomeNavigation, PageNavigation } from "./Navigation";
 import SideNavigation from "./Navigation/SideNavigation";
 
-
 function App() {
   const location = useLocation();
 
@@ -17,7 +16,9 @@ function App() {
       <div className="flex">
         <SideNavigation />
         <div className="grow mt-5">
-          <Outlet/>
+          <div className="p-6 max-w-[80%] mx-auto">
+            <Outlet />
+          </div>
         </div>
       </div>
     </>

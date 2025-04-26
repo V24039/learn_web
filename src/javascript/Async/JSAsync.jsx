@@ -48,7 +48,7 @@ const JSAsync = () => {
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <>
       <MainHeading heading="JavaScript Asynchronous Programming" />
 
       {/* setTimeout Section */}
@@ -95,7 +95,7 @@ const JSAsync = () => {
           label="Waiting for idle thread"
         />
       </section>
-    </div>
+    </>
   );
 };
 

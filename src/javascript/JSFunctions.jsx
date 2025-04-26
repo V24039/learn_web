@@ -2,7 +2,7 @@ import { CodeDisplay, Grid, MainHeading } from "../components";
 
 export const JSFunctions = () => {
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <>
       <MainHeading heading="JavaScript Function" />
       <section>
         <Grid
@@ -33,6 +33,6 @@ console.log(func3.length);
           ></CodeDisplay>
         </Grid>
       </section>
-    </div>
+    </>
   );
 };

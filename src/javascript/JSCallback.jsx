@@ -31,8 +31,8 @@ export const JSCallback = () => {
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
-      <MainHeading heading="JavaScript Callbacks"/>
+    <>
+      <MainHeading heading="JavaScript Callbacks" />
 
       {/* Introduction Section */}
       <section className="mb-8 bg-gray-800 p-4 rounded-lg">
@@ -109,6 +109,6 @@ export const JSCallback = () => {
           </li>
         </ul>
       </section>
-    </div>
+    </>
   );
 };
