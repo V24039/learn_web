@@ -186,7 +186,7 @@ export const CreatingObjects = () => {
     console.log("Value of c:", mergedObject.c); // undefined
   };
 
-  const assignMisilaniousExample = () => {
+  const assignPrimitivesExample = () => {
     // taken from MDN
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#examples
     const v1 = "abc";
@@ -251,6 +251,94 @@ export const CreatingObjects = () => {
   //#endregion
 
   //#region Object.groupBy
+
+  const groupByBasicExample = () => {
+    const data = [
+      { name: "John", age: 25 },
+      { name: "Jane", age: 30 },
+      { name: "John", age: 35 },
+      { name: "Jane", age: 40 },
+    ];
+
+    console.log("Original Data:", data);
+    const groupedData = Object.groupBy(data, (item) => item.name);
+    console.log("Grouped Data:", groupedData);
+
+    data.push({ name: "John", age: 45 });
+    console.log("Grouped Data after adding new item:", groupedData);
+  };
+
+  const groupByWithCallback = () => {
+    const data = [
+      { name: "asparagus", type: "vegetables 5", quantity: 9 },
+      { name: "bananas", type: "fruit 5", quantity: 5 },
+      { name: "goat", type: "meat 23", quantity: 23 },
+      { name: "cherries", type: "fruit 12", quantity: 12 },
+      { name: "fish", type: "meat true", quantity: true },
+    ];
+
+    console.log("Original Data:", data);
+    const groupedData = Object.groupBy(data, (item) =>
+      item.quantity > 5 ? "greater than 5" : "less than or equal to 5"
+    );
+    console.log("Grouped Data:", groupedData);
+  };
+
+  const groupByExampleWithMiscellanous = () => {
+    const data = [
+      { name: "John", age: 25 },
+      { name: "Jane", age: 30 },
+      { name: "John", age: 35 },
+      { name: "Jane", age: 40 },
+      { name: undefined, age: 45 },
+      { name: null, age: 50 },
+      { age: 90 },
+      { name: "John" },
+    ];
+
+    console.log("Original Data:", data);
+    const groupedData = Object.groupBy(data, (item) => item.name);
+    console.log("Grouped Data:", groupedData);
+  };
+
+  const groupByWithNestedObjects = () => {
+    const data = [
+      { name: "John", age: 25, address: { city: "New York" } },
+      { name: "Jane", age: 30, address: { city: "Los Angeles" } },
+      { name: "John", age: 35, address: { city: "Chicago" } },
+      { name: "Jane", age: 40, address: { city: "New York" } },
+    ];
+
+    console.log("Original Data:", data);
+    const groupedData = Object.groupBy(data, (item) => item.name);
+    console.log("Grouped Data:", groupedData);
+
+    data[0].address.city = "San Francisco";
+    console.log("Grouped Data after modifying address:", groupedData);
+  };
+
+  const groupByWithCallbackOnNestedObjects = () => {
+    const data = [
+      { name: "BGk", age: 25, address: { city: "BGk" } },
+      { name: "BJP", age: 30, address: { city: "BJP" } },
+      { name: "BNG", age: 35, address: { city: "BNG" } },
+      { name: "BGk", age: 40, address: { city: "BGk" } },
+      { name: "BNG", age: 45, address: { city: "BNG" } },
+      { name: "BJP", age: 50, address: { city: "BJP" } },
+      { name: "BGk", age: 55, address: { city: "BGk" } },
+      { name: "BNG", age: 60, address: { city: "BNG" } },
+      { name: "BJP", age: 65, address: { city: "BJP" } },
+      { name: "BGk", age: 70, address: { city: "BGk" } },
+    ];
+
+    console.log("Original Data:", data);
+    const groupedData = Object.groupBy(data, (item) => item.address.city);
+    console.log("Grouped Data:", groupedData);
+
+    data[0].address.city = "New City";
+    console.log("Grouped Data after modifying address:", groupedData);
+  }
+
   //#endregion
 
   return (
@@ -394,8 +482,41 @@ const obj = Object.create(Object.prototype, {
               label="Enumerable property"
             />
             <Button
-              handleClick={assignMisilaniousExample}
+              handleClick={assignPrimitivesExample}
               label="Assign with primitives"
+            />
+          </Buttons>
+        </Grid>
+        <Grid
+          label="Object.groupBy"
+          descp={[
+            "Groups the elements of an iterable based on a specified criterion.",
+            "It takes an iterable (like an array) and a grouping callback function as arguments.",
+            "Returns an object where the keys are the result of applying the grouping function to each element, and the values are arrays of elements that share the same key.",
+            "If the grouping function returns the same key for multiple elements, those elements will be grouped together in an array.",
+            "If the grouping function returns undefined, those elements will be grouped under the key 'undefined'.",
+          ]}
+        >
+          <Buttons>
+            <Button
+              handleClick={groupByBasicExample}
+              label="Group By Example"
+            />
+            <Button
+              handleClick={groupByWithCallback}
+              label="Group By with callback"
+            />
+            <Button
+              handleClick={groupByWithNestedObjects}
+              label="Group By with nested objects"
+            />
+            <Button
+              handleClick={groupByWithCallbackOnNestedObjects}
+              label="Group By with callback on nested objects"
+            />
+            <Button
+              handleClick={groupByExampleWithMiscellanous}
+              label="Group By with undefined"
             />
           </Buttons>
         </Grid>
