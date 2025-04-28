@@ -247,6 +247,58 @@ export const JSPromises = () => {
     );
   };
 
+  const promsie = (attempts, maxAttempts) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (attempts > maxAttempts) {
+          console.log("Promise resolved.");
+          resolve("Success!");
+        } else {
+          console.log("Promise rejected.");
+          reject("Failed!");
+        }
+      }, 1000);
+    });
+  };
+
+  const retryPromiseMaxReached = async (attempts) => {
+    const maxAttempts = 3;
+
+    await promsie(attempts, maxAttempts)
+      .then((result) => {
+        console.log("Promise resolved:", result);
+      })
+      .catch((error) => {
+        console.log("Promise rejected:", error);
+        if (attempts < maxAttempts) {
+          console.log(`Retrying... (${attempts}/${maxAttempts})`);
+          attempts++;
+          retryPromiseMaxReached(attempts, maxAttempts);
+        } else {
+          console.log("Max attempts reached. Giving up.");
+        }
+      });
+  };
+
+  const retryPromiseSuccess = async (attempts) => {
+    const maxAttempts = 3;
+
+    await promsie(attempts, maxAttempts)
+      .then((result) => {
+        console.log("Promise resolved:", result);
+      })
+      .catch((error) => {
+        console.log("Promise rejected:", error);
+        if (attempts < maxAttempts+2) {
+          console.log(`Retrying... (${attempts}/${maxAttempts})`);
+          attempts++;
+          retryPromiseSuccess(attempts, maxAttempts);
+        } else {
+          console.log("Max attempts reached. Giving up.");
+        }
+      });
+  };
+
   // eslint-disable-next-line no-unused-vars
   const promiseCopy = new MyPromiseCopy(function (resolve, reject) {});
 
@@ -412,7 +464,7 @@ p1.then(
           multiple promises concurrently.
         </p>
       </section>
-      <section className="grid gap-6">
+      <section className="grid gap-6 mb-8">
         {/* Promise.all */}
         <Grid
           label="Promise.all()"
@@ -499,6 +551,20 @@ p1.then(
               label="Demo Promise.any (All Reject)"
             />
           </Buttons>
+        </Grid>
+      </section>
+      <section className="grid gap-6">
+        {/* Retry Promise */}
+        <Grid
+          label="Retry Promise"
+          descp={[
+            "Demonstrates a retry mechanism for promises.",
+            "Retries a promise a specified number of times before giving up.",
+          ]}
+        >
+          <Button label="Retry Promise Max fail" handleClick={() => retryPromiseMaxReached(0)} />
+          <Button label="Retry Promise success" handleClick={() => retryPromiseSuccess(0)} />
+
         </Grid>
       </section>
     </>
