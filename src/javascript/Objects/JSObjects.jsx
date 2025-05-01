@@ -6,7 +6,9 @@ import {
 } from "../../components";
 import { JSPaths } from "../../Navigation/const";
 import { objectStyles } from "./consts";
+import { ObjectInstanceMethods } from "./instanceMethod";
 import { CreatingObjects, GetMethods, ObjectsProperty } from "./staticMethods";
+import { ObjectOtherProperties } from "./staticMethods/otherProps";
 
 /* TO-DO
 1 Explain boxing
@@ -128,6 +130,8 @@ export const JSObjects = () => {
       <CreatingObjects />
       <GetMethods />
       <ObjectsProperty />
+      <ObjectOtherProperties />
+      <ObjectInstanceMethods />
     </>
   );
 };
