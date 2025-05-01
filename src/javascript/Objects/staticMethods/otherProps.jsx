@@ -2,7 +2,6 @@
 TO-DO
   - freeze
   - seal
-  - hasOwn
   - is
   - isExtensible
   - isFrozen

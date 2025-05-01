@@ -1,8 +1,9 @@
 export { CodeElement } from "./CodeElement";
-export { CodeDisplay } from "./CodeDisplay"
+export { CodeDisplay } from "./CodeDisplay";
 export { Button } from "./Button";
 export { Buttons } from "./Buttons";
 export { Grid } from "./Grid";
 export { MainHeading } from "./MainHeading";
 export { Lists } from "./Lists";
 export { PropertiesPopup } from "./PropertiesPopup";
+export { Accordion } from "./Accordion";

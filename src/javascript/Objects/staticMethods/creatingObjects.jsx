@@ -1,8 +1,3 @@
-/*TO-DO
-  - assign
-  - groupBy 
-*/
-
 import { Button, Buttons, CodeDisplay, Grid } from "../../../components";
 import { objectStyles } from "../consts";
 
