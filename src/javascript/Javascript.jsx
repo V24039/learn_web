@@ -1,5 +1,7 @@
 import { Outlet } from "react-router-dom";
 
+// Expression statement
+
 const Javascript = () => {
   // When you log objects in JavaScript, the console shows the current state of the object at the time you view the console, not at the time console.log was called
 

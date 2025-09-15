@@ -1,4 +1,4 @@
-import { CodeDisplay, Grid, MainHeading } from "../components";
+import { CodeDisplay, Grid, MainHeading } from "../../components";
 
 export const JSFunctions = () => {
   return (
