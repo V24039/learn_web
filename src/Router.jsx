@@ -47,6 +47,10 @@ export const router = createBrowserRouter([
         path: "redux",
         element: <ReduxCount />,
       },
+      {
+        path: "react",
+        element: <JSFunctions />,
+      },
     ],
   },
 ]);

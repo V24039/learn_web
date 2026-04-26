@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
+import { Pages } from "./const";
 
 export const PageNavigation = () => {
   return (
     <div className="navigation">
-      <Link to="javascript">JavaScript</Link>
-      <Link to="">HTML</Link>
-      <Link to="">CSS</Link>
-      <Link to="redux">Redux</Link>
+      {Pages.map(({ linkTo, pageName }) => (
+        <Link key={`${linkTo}-${pageName}`} to={linkTo}>
+          {pageName}
+        </Link>
+      ))}
     </div>
   );
 };

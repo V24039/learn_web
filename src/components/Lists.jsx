@@ -9,11 +9,25 @@ export const Lists = ({ listName, points, orderList = false }) => {
   return (
     <>
       <h3 className="leading-10 text-xl">{listName}</h3>
-      <listType>
+      {/* <listType>
         {points.map((point, index) => (
           <li key={index}>{point}</li>
         ))}
-      </listType>
+      </listType> */}
+
+      {orderList ? (
+        <ol>
+          {points.map((point, index) => (
+            <li key={index}>{point}</li>
+          ))}
+        </ol>
+      ) : (
+        <ul>
+          {points.map((point, index) => (
+            <li key={index}>{point}</li>
+          ))}
+        </ul>
+      )}
     </>
   );
 };

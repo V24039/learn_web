@@ -51,3 +51,11 @@ export const JSPaths = [
     name: "Functions",
   },
 ];
+
+export const Pages = [
+  { linkTo: "javascript", pageName: "JavaScript" },
+  { linkTo: "", pageName: "HTML" },
+  { linkTo: "", pageName: "CSS" },
+  { linkTo: "redux", pageName: "Redux"},
+  { linkTo: "react", pageName: "React"},
+];
