@@ -3,7 +3,7 @@ import { Lists, MainHeading } from "../../components";
 export const Flexbox = () => {
   return (
     <>
-      <MainHeading heading="FlexBox" reference="" />
+      <MainHeading heading="FlexBox"/>
       <Lists
         listName=""
         points={[

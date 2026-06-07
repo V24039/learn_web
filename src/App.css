@@ -9,12 +9,12 @@ nav {
 }
 
 .navigation {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   background-color: bisque;
-  & a{
+  & a {
     padding: 20px;
   }
   & a:hover {
