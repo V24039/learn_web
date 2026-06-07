@@ -1,4 +1,10 @@
-export const JSPaths = [
+export interface JSPath {
+  path: string;
+  name: string;
+  subPaths?: JSPath[];
+}
+
+export const JSPaths: JSPath[] = [
   {
     path: "/javascript/object",
     name: "Objects",
@@ -54,8 +60,8 @@ export const JSPaths = [
 
 export const Pages = [
   { linkTo: "javascript", pageName: "JavaScript" },
-  { linkTo: "", pageName: "HTML" },
-  { linkTo: "", pageName: "CSS" },
-  { linkTo: "redux", pageName: "Redux"},
-  { linkTo: "react", pageName: "React"},
+  { linkTo: "html", pageName: "HTML" },
+  { linkTo: "css", pageName: "CSS" },
+  { linkTo: "redux", pageName: "Redux" },
+  { linkTo: "react", pageName: "React" },
 ];

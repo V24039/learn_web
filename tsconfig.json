@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "es2021", // Javascript standard to complie
+    "lib": ["dom", "dom.iterable", "esnext"], // Library files to be included in the compilation
+    "types": ["vite/client"],
+    "allowJs": true, // Allow JavaScript files to be compiled
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "skipDefaultLibCheck": true, // Skip type checking of default library declaration files
+    "esModuleInterop": true, // Enable interoperability between CommonJS and ES Modules
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "strict": true, // Enable all strict type-checking options
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+    "module": "esnext", // Module code generation method
+    "moduleResolution": "Bundler", // Module resolution strategy
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true, // Allow importing JSON files as modules
+    "isolatedModules": true, // Ensure that each file can be safely transpiled without relying on other imports
+    "jsx": "react-jsx", // Enable the new JSX transform
+    "jsxImportSource": "@emotion/react", // Specify the library to use for JSX factory functions
+    "noImplicitAny": true, // Raise an error on expressions and declarations with an implied 'any' type
+    "experimentalDecorators": true, // Enable experimental support for decorators
+    "typeRoots": [
+      // List of folders to include type definitions from
+      "./node_modules/@types",
+      "./types",
+      "@testing-library/jest-dom",
+      "../src/themes/types",
+      "./node_modules"
+    ],
+    "declaration": false, // Do not generate declaration files
+    "noEmit": true, // Do not emit output files
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements
+    "useUnknownInCatchVariables": false, // Use 'any' type for catch clause variables instead of 'unknown'
+    "paths": { "*": ["./*"] } // Allow importing modules using absolute paths
+  },
+  "include": ["src/**/*", "types", "vite-env.d.ts"], // Specify the files to be included in the compilation
+  "exclude": [
+    "node_modules",
+    "build",
+    "jest",
+    "src/setupTests.ts",
+    "packages/components",
+    "packages/themes"
+  ]
+}
