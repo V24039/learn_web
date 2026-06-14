@@ -31,7 +31,7 @@
     "noEmit": true, // Do not emit output files
     "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements
     "useUnknownInCatchVariables": false, // Use 'any' type for catch clause variables instead of 'unknown'
-    "paths": { "*": ["./*"] } // Allow importing modules using absolute paths
+    "paths": { "*": ["./*"], "components": ["./src/components/*"] } // Allow importing modules using absolute paths
   },
   "include": ["src/**/*", "types", "vite-env.d.ts"], // Specify the files to be included in the compilation
   "exclude": [
@@ -41,5 +41,5 @@
     "src/setupTests.ts",
     "packages/components",
     "packages/themes"
-  ]
+  ],
 }

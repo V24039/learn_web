@@ -72,7 +72,7 @@ export const JSFill = () => {
     console.log("Useful for initialising flag arrays: new Array(n).fill(false).");
   };
 
-  // Edge Cases ────────────────────────────────────────────────────────────
+  // Edge Cases
 
   const demoFillNegativeStart = () => {
     // Negative start: normalised as start + length

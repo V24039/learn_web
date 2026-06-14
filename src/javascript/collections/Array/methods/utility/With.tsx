@@ -1,4 +1,4 @@
-import { Button, Buttons, Grid } from "src/components";
+import { Grid, Buttons, Button } from "src/components";
 
 export const JSWith = () => {
   const sparseArray = [1, , 3];
