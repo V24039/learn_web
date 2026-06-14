@@ -5,6 +5,8 @@ interface PropertiesPopup {
   }[];
 }
 
+
+// To-Do fix the css
 export const PropertiesPopup = ({ id, properties }:PropertiesPopup) => {
   return (
     <div className="bg-amber-400" id={id} popover="auto">

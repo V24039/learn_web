@@ -11,6 +11,7 @@ import {
 import ReduxCount from "./redux/reduxCount";
 import { Flexbox } from "./cssExamples/flexbox";
 import { HTML } from "./html";
+import { JSArrayMethods } from "./javascript/collections";
 
 const routerJS = [
   {
@@ -36,6 +37,11 @@ const routerJS = [
   {
     path: "functions",
     element: <JSFunctions />,
+  },
+  
+  {
+    path: "arrays",
+    element: <JSArrayMethods />,
   },
 ];
 

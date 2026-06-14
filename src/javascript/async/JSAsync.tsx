@@ -1,4 +1,4 @@
-import { Button, CodeElement, MainHeading } from "../../components";
+import { Button, Buttons, CodeElement, Grid, Lists, MainHeading } from "../../components";
 
 const JSAsync = () => {
   const demoSetTimeout = () => {
@@ -52,48 +52,53 @@ const JSAsync = () => {
       <MainHeading heading="JavaScript Asynchronous Programming" />
 
       {/* setTimeout Section */}
-      <section className="mb-8 bg-gray-800 p-4 rounded-lg">
-        <h2 className="text-xl font-semibold mb-4">setTimeout Function</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Basic Usage</h3>
-            <p className="text-gray-300 mb-2">
-              Calls a function after specified milliseconds
-            </p>
+      <section className="grid gap-6 mb-8">
+        <Grid
+          label="setTimeout Function"
+          descp={["Calls a function after specified milliseconds"]}
+        >
+          <Buttons>
             <Button handleClick={demoSetTimeout} label="Demo setTimeout" />
-          </div>
+          </Buttons>
           <CodeElement>setTimeout(function, milliseconds);</CodeElement>
-        </div>
+        </Grid>
       </section>
 
       {/* setInterval Section */}
-      <section className="mb-8 bg-gray-800 p-4 rounded-lg">
-        <h2 className="text-xl font-semibold mb-4">setInterval Function</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Repeated Execution</h3>
-            <p className="text-gray-300 mb-2">
-              Calls a function repeatedly at specified intervals
-            </p>
+      <section className="grid gap-6 mb-8">
+        <Grid
+          label="setInterval Function"
+          descp={["Calls a function repeatedly at specified intervals"]}
+        >
+          <Buttons>
             <Button handleClick={demoSetInterval} label="Demo setInterval" />
-          </div>
+          </Buttons>
           <CodeElement>setInterval(function, milliseconds);</CodeElement>
-        </div>
+        </Grid>
       </section>
 
       {/* Event Loop Section */}
-      <section className="bg-gray-800 p-4 rounded-lg">
-        <h2 className="text-xl font-semibold mb-4">JavaScript Event Loop</h2>
-        <ul className="list-disc pl-6 space-y-2 text-gray-300">
-          <li>Tasks are executed in order of the event loop</li>
-          <li>Microtasks have priority over regular tasks</li>
-          <li>setTimeout/setInterval callbacks are regular tasks</li>
-          <li>Promise callbacks are microtasks</li>
-        </ul>
-        <Button
-          handleClick={demoSingleThread}
-          label="Waiting for idle thread"
-        />
+      <section className="grid gap-6">
+        <Grid
+          label="JavaScript Event Loop"
+          descp={["Understand how the event loop processes tasks and microtasks"]}
+        >
+          <Lists
+            listName="Key Points:"
+            points={[
+              "Tasks are executed in order of the event loop",
+              "Microtasks have priority over regular tasks",
+              "setTimeout/setInterval callbacks are regular tasks",
+              "Promise callbacks are microtasks",
+            ]}
+          />
+          <Buttons>
+            <Button
+              handleClick={demoSingleThread}
+              label="Waiting for idle thread"
+            />
+          </Buttons>
+        </Grid>
       </section>
     </>
   );

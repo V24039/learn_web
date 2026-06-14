@@ -6,7 +6,7 @@ export interface JSPath {
 
 export const JSPaths: JSPath[] = [
   {
-    path: "/javascript/object",
+    path: "/javascript/objects",
     name: "Objects",
     subPaths: [
       { path: "#constructor", name: "constructor" },
@@ -55,6 +55,10 @@ export const JSPaths: JSPath[] = [
   {
     path: "/javascript/functions",
     name: "Functions",
+  },  
+  {
+    path: "/javascript/arrays",
+    name: "Arrays",
   },
 ];
 

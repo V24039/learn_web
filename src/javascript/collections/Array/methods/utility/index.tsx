@@ -1,0 +1,10 @@
+export { JSIncludes } from "./Includes";
+export { JSSome } from "./Some";
+export { JSEvery } from "./Every";
+export { JSIndexOf } from "./Indexof";
+export { JSLastIndexOf } from "./LastIndexOf";
+export { JSAt } from "./At";
+export { JSFindIndex } from "./FindIndex";
+export { JSFindLast } from "./FindLast";
+export { JSFindLastIndex } from "./FindLastIndex";
+export { JSWith } from "./With";

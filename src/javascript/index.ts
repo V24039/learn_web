@@ -4,3 +4,8 @@ export { JSPromises } from "./JSPromises";
 export { JSAsync } from "./async";
 export { JSFunctions } from "./functions";
 export { default as JSObjects } from "./objects";
+export { JSVariables } from "./JSVariables";
+export { JSOperators } from "./JSOperators";
+export { JSControlFlow } from "./JSControlFlow";
+export { JSThisBinding } from "./JSThisBinding";
+export { JSPrototypes } from "./JSPrototypes";
