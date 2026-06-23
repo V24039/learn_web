@@ -5,4 +5,4 @@ export { JSForeach } from "./ForEach";
 export { JSReduce } from "./Reduce";
 export { JSReduceRight } from "./ReduceRight";
 export { JSKeys } from "./Keys";
-export { JSEntires } from "./Entries";
+export { JSEntries } from "./Entries";
